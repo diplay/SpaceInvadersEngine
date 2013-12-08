@@ -7,7 +7,7 @@ all:
 
 clean-all: clean
 	cd src/Engine; make clean
-	cd src/Inavaders; make clean;
+	cd src/Invaders; make clean;
 
 clean:
 	rm -rf distr
