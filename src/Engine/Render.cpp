@@ -91,7 +91,7 @@ GLuint MakeAProgram(const GLchar* vshader, const GLchar* fshader)
 
 void InitShaders()
 {
-	const GLchar* vshader = "#version 150\n" \
+	const GLchar* vshader = "#version 130\n" \
 		"in vec2 position;\n" \
 		"uniform vec4 target;\n" \
 		"uniform float aspect;\n" \
@@ -105,7 +105,7 @@ void InitShaders()
 		"pos.y += target.y;\n" \
 		"gl_Position = vec4(pos, 0.0f, 1.0f);\n" \
 		"}";
-	const GLchar* fshader = "#version 150\n" \
+	const GLchar* fshader = "#version 130\n" \
 		"in vec2 texCoord;\n" \
 		"uniform sampler2D tex;\n" \
 		"uniform vec4 src;\n" \
@@ -134,7 +134,7 @@ void InitShaders()
 	glUniform1f(aspLoc, (float)screenHeight / screenWidth);
 	printf("aspect = %f\n", (float)screenHeight / screenWidth);
 
-	vshader = "#version 150\n" \
+	vshader = "#version 130\n" \
 		"in vec2 position;\n" \
 		"uniform vec4 target;\n" \
 		"void main(){\n" \
@@ -146,7 +146,7 @@ void InitShaders()
 		"gl_Position = vec4(pos, 0.0f, 1.0f);\n" \
 		"}";
 
-	fshader = "#version 150\n" \
+	fshader = "#version 130\n" \
 		"uniform vec4 col;\n" \
 		"out vec4 color;\n" \
 		"void main(){\n" \
