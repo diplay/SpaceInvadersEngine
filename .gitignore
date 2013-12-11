@@ -1,4 +1,5 @@
 distr
+src/Engine/*.a
 src/Engine/*.o
 src/Invaders/*.o
 src/Invaders/SpaceInvaders

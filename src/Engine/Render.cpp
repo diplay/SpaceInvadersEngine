@@ -238,7 +238,10 @@ void Render::InitGraphics(InitParameters ip)
 	if(wglSwapIntervalEXT)
 		wglSwapIntervalEXT(ip.vsync);
 #else
-	//TODO
+	typedef int (* glXSwapIntervalSGI_Func)(int);
+	glXSwapIntervalSGI_Func glXSwapIntervalSGI = glXSwapIntervalSGI_Func(glutGetProcAddress("glXSwapIntervalSGI"));
+	if(glXSwapIntervalSGI)
+		glXSwapIntervalSGI(ip.vsync);
 #endif
 }
 
