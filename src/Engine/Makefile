@@ -1,4 +1,4 @@
-CFLAGS := -c -std=c++11
+CFLAGS := -c -std=c++11 $(ADDITIONAL)
 SOURCES := Audio.cpp Cursor.cpp CustomFont.cpp Entity.cpp Font.cpp FrameSequence.cpp Game.cpp GameState.cpp \
 	Keyboard.cpp Layer.cpp Mouse.cpp Render.cpp Resource.cpp ResourceManager.cpp Scene.cpp Sprite.cpp \
 	StateManager.cpp Texture.cpp Timer.cpp Utils.cpp
